@@ -1,0 +1,35 @@
+{
+  "name": "odin-library",
+  "version": "1.0.0",
+  "description": "A library project made for the Odin Project",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "watcher": "webpack --watch --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twofun2fun/odin-library.git"
+  },
+  "author": "Tufan Calisir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twofun2fun/odin-library/issues"
+  },
+  "homepage": "https://github.com/twofun2fun/odin-library#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "autoprefixer": "^10.4.8",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "cssnano": "^5.1.13",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss-loader": "^7.0.1",
+    "sass": "^1.54.5",
+    "sass-loader": "^13.0.2",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.0"
+  }
+}
