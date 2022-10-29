@@ -9,16 +9,16 @@
   </head>
   <body>
     <button class="button add-js">
-      Add Book
+      + Add Book
     </button>
     <dialog class="modal modal-js">
       <form id="bookform">
-        <input type="text" name="title" id="title" placeholder="Title">
+        <input type="text" name="title" id="title" placeholder="Title" class="bookform__element">
         <p class="error">You have this book already in your library.</p>
-        <input type="text" name="author" id="author" placeholder="Author">
-        <input type="number" name="pages" id="pages" placeholder="Pages">
+        <input type="text" name="author" id="author" placeholder="Author" class="bookform__element">
+        <input type="number" name="pages" id="pages" placeholder="Pages" class="bookform__element">
         <label for="read">Read yet?</label>
-        <input type="checkbox" name="read" id="read">
+        <input type="checkbox" name="read" id="read" class="bookform__element">
         <button type="button" class="button submit-js">Submit</button>
       </form>
     </dialog>
