@@ -38,9 +38,9 @@ function createBookTile(element) {
   remove.classList.add('tile__remove', 'tile__remove-js', 'tile__button');
 
   //Values
-  title.innerHTML = '"' + element.title + '"';
-  author.innerHTML = element.author;
-  pages.innerHTML = element.pages;
+  title.innerHTML = '<div class="tile__highlight">Title</div>' + '"' + element.title + '"';
+  author.innerHTML = '<div class="tile__highlight">Author</div>' + element.author;
+  pages.innerHTML = '<div class="tile__highlight">Pages</div>' + element.pages;
 
   if (element.read) {
     read.innerHTML = 'Read';
@@ -100,10 +100,11 @@ submitBook.addEventListener('click', () => {
   }
 });
 
+
 const targetAction = element => {
   const target = element.target;
   const firstChild = target.parentNode.firstChild;
-  const firstChildInner = firstChild.innerHTML.replace(/"/g, '');
+  const firstChildInner = firstChild.innerHTML.replace(/"/g, '').replace(/<div class=tile__highlight>Title<\/div>/g, '');
   const remove = target.classList.contains('tile__remove-js');
   const read = target.classList.contains('tile__read-js');
 
