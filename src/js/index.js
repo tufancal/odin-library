@@ -13,7 +13,6 @@ let library = [];
 // Data-set attribute to check remove
 const datasetAttribute = 'book';
 
-
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -61,6 +60,8 @@ function createBookTile(element) {
   //Dataset to remove tile & object
   tile.dataset.index = datasetAttribute;
   remove.dataset.index = datasetAttribute;
+  //Dataset to check for read
+  read.dataset.index = datasetAttribute;
   return tile;
 }
 
@@ -99,24 +100,46 @@ submitBook.addEventListener('click', () => {
   }
 });
 
-container.addEventListener('click', element => {
+const targetAction = element => {
   const target = element.target;
   const firstChild = target.parentNode.firstChild;
   const firstChildInner = firstChild.innerHTML.replace(/"/g, '');
   const remove = target.classList.contains('tile__remove-js');
+  const read = target.classList.contains('tile__read-js');
 
-  if (remove && target.dataset.index === target.parentNode.dataset.index) {
+  //Remove or check for read
+  if (target.dataset.index === target.parentNode.dataset.index) {
     for (let i = 0; i < library.length; i++) {
       const title = library[i].title;
-
+      let readStatus = library[i].read;
+      
+      //Remove book
       if (
         firstChild.classList.contains('tile__title') &&
-        title == firstChildInner
+        title == firstChildInner &&
+        remove
       ) {
         library.splice(i, 1);
         target.parentNode.remove();
         break;
+        // Change read status
+      } else if (
+        firstChild.classList.contains('tile__title') &&
+        title == firstChildInner &&
+        read
+      ) {
+        Object.assign(library[i], {read: !readStatus});
+        readStatus = library[i].read; //Reassign variable to switched read status
+        if (readStatus) {
+          target.innerHTML = 'Read';
+        } else {
+          target.innerHTML = 'Not read';
+        }
       }
     }
   }
+};
+
+container.addEventListener('click', element => {
+  targetAction(element);
 });
