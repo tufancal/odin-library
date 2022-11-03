@@ -34,8 +34,8 @@ function createBookTile(element) {
   title.classList.add('tile__title', 'tile__element');
   author.classList.add('tile__element');
   pages.classList.add('tile__element');
-  read.classList.add('tile__read', 'tile__read-js', 'tile__button');
-  remove.classList.add('tile__remove', 'tile__remove-js', 'tile__button');
+  read.classList.add('tile__read', 'tile__read-js', 'tile__button', 'button');
+  remove.classList.add('tile__remove', 'tile__remove-js', 'tile__button', 'button');
 
   //Values
   title.innerHTML = '<div class="tile__highlight">Title</div>' + '"' + element.title + '"';
