@@ -1,0 +1,10 @@
+.button {
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-base);
+  padding: var(--distance-xs) var(--distance-m);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  background: var(--color-component-bg);
+  cursor: pointer;
+}
