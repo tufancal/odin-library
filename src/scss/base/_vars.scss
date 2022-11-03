@@ -1,0 +1,81 @@
+$mq-tablet: 'screen and (min-width: 768px)';
+$mq-desktop: 'screen and (min-width: 1024px)';
+$mq-desktop-l: 'screen and (min-width: 1440px)';
+
+:root {
+  // <<< Real colors >>>
+  //Dark mode
+  --mine-shaft: #282222;
+  --yellow-green: #abdf75;
+  --amazon: #337357;
+  --roman: #db5461;
+  --brunt-sienna: #eb8258;
+
+  //Light mode
+  --white: #ffffff;
+  --eastern-blue: #20a39e;
+  --moody-blue: #645dd7;
+  --shiraz: #bb0a21;
+  --burning-orange: #ff773d;
+
+  // <<< Abstract colors >>>
+  //Dark mode
+  --color-primary: var(--mine-shaft);
+  --color-secondary: var(--yellow-green);
+  --color-cta-primary: var(--amazon);
+  --color-cta-secondary: var(--roman);
+  --color-cta-tertiary: var(--brunt-sienna);
+
+  //Light mode
+  --color-primary-light: var(--white);
+  --color-secondary-light: var(--eastern-blue);
+  --color-cta-primary-light: var(--moody-blue);
+  --color-cta-secondary-light: var(--shiraz);
+  --color-cta-tertiary-light: var(--burning-orange);
+
+  // <<< Use case colors >>>
+
+  // Body
+  //Dark mode
+  --color-body-bg: var(--color-primary);
+  --color-body-text: var(--color-primary);
+
+  // Light mode
+  --color-body-bg-light: var(--color-primary-light);
+  --color-body-text-light: var(--color-primary-light);
+
+  // Component
+  //Dark mode
+  --color-component-bg: var(--color-secondary);
+
+  //Light mide
+  --color-component-bg-light: var(--color-secondary-light);
+
+  // <<< Fonts >>>
+  //Font family
+  --font-family-base: Inter, Arial;
+
+  //Font size
+  --font-size-base: 16px;
+  --font-size-s: 20px;
+  --font-size-m: 24px;
+  --font-size-l: 28px;
+
+  // <<< Distances >>>
+  --distance-xxs: 4px;
+  --distance-xs: 8px;
+  --distance-s: 16px;
+  --distance-m: 20px;
+  --distance-l: 24px;
+  --distance-xl: 32px;
+  --distance-xxl: 36px;
+  --distance-3xl: 40px;
+
+  // <<< Line height >>>
+  --line-height-base: 1.3;
+
+  // <<< Icon >>>
+  --icon-base: 70px;
+  --icon-s: 100px;
+  --icon-m: 130px;
+}

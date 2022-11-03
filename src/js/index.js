@@ -100,8 +100,6 @@ submitBook.addEventListener('click', () => {
   }
 });
 
-//test
-
 const targetAction = element => {
   const target = element.target;
   const firstChild = target.parentNode.firstChild;
