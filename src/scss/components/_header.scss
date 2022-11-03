@@ -1,0 +1,9 @@
+.header {
+  text-align: center;
+  background: var(--color-component-bg);
+
+  &__logo {
+    padding: var(--distance-xs);
+    width: var(--icon-base);
+  }
+}
