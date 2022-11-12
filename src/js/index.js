@@ -31,7 +31,7 @@ function createBookTile(element) {
 
   //Classes
   tile.classList.add('container__tile');
-  title.classList.add('tile__title', 'tile__element');
+  title.classList.add('tile__element');
   author.classList.add('tile__element');
   pages.classList.add('tile__element');
   read.classList.add('tile__read', 'tile__read-js', 'tile__button', 'button');
@@ -115,7 +115,7 @@ const targetAction = element => {
       
       //Remove book
       if (
-        firstChild.classList.contains('tile__title') &&
+        firstChild.classList.contains('tile__element') &&
         title == firstChildInner &&
         remove
       ) {
@@ -124,7 +124,7 @@ const targetAction = element => {
         break;
         // Change read status
       } else if (
-        firstChild.classList.contains('tile__title') &&
+        firstChild.classList.contains('tile__element') &&
         title == firstChildInner &&
         read
       ) {

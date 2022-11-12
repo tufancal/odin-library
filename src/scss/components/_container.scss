@@ -1,0 +1,6 @@
+.container {
+  &__tile {
+    border-radius: var(--border-radius-base);
+    background: var(--color-component-bg);
+  }
+}
