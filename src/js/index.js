@@ -30,16 +30,23 @@ function createBookTile(element) {
   const remove = document.createElement('button');
 
   //Classes
-  tile.classList.add('container__tile');
+  tile.classList.add('tile');
   title.classList.add('tile__element');
   author.classList.add('tile__element');
   pages.classList.add('tile__element');
   read.classList.add('tile__read', 'tile__read-js', 'tile__button', 'button');
-  remove.classList.add('tile__remove', 'tile__remove-js', 'tile__button', 'button');
+  remove.classList.add(
+    'tile__remove',
+    'tile__remove-js',
+    'tile__button',
+    'button'
+  );
 
   //Values
-  title.innerHTML = '<div class="tile__highlight">Title</div>' + '"' + element.title + '"';
-  author.innerHTML = '<div class="tile__highlight">Author</div>' + element.author;
+  title.innerHTML =
+    '<div class="tile__highlight">Title</div>' + '"' + element.title + '"';
+  author.innerHTML =
+    '<div class="tile__highlight">Author</div>' + element.author;
   pages.innerHTML = '<div class="tile__highlight">Pages</div>' + element.pages;
 
   if (element.read) {
@@ -103,7 +110,9 @@ submitBook.addEventListener('click', () => {
 const targetAction = element => {
   const target = element.target;
   const firstChild = target.parentNode.firstChild;
-  const firstChildInner = firstChild.innerHTML.replace(/"/g, '').replace(/<div class=tile__highlight>Title<\/div>/g, '');
+  const firstChildInner = firstChild.innerHTML
+    .replace(/"/g, '')
+    .replace(/<div class=tile__highlight>Title<\/div>/g, '');
   const remove = target.classList.contains('tile__remove-js');
   const read = target.classList.contains('tile__read-js');
 
@@ -112,7 +121,7 @@ const targetAction = element => {
     for (let i = 0; i < library.length; i++) {
       const title = library[i].title;
       let readStatus = library[i].read;
-      
+
       //Remove book
       if (
         firstChild.classList.contains('tile__element') &&
@@ -128,10 +137,11 @@ const targetAction = element => {
         title == firstChildInner &&
         read
       ) {
-        Object.assign(library[i], {read: !readStatus});
+        Object.assign(library[i], { read: !readStatus });
         readStatus = library[i].read; //Reassign variable to switched read status
         if (readStatus) {
           target.innerHTML = 'Read';
+          target.classList.add('tile__read--active');
         } else {
           target.innerHTML = 'Not read';
         }
