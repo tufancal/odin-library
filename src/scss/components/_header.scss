@@ -1,14 +1,25 @@
 .header {
   margin-bottom: var(--distance-3xl);
+  max-width: 1440px;
   text-align: center;
   background: var(--color-component-bg);
 
+  @media #{$mq-desktop-l} {
+    margin: 0 auto var(--distance-3xl);
+  }
+
   &__logo {
-    padding: var(--distance-xs);
     width: var(--icon-base);
 
     @media #{$mq-tablet} {
       width: var(--icon-s);
     }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--distance-m);
   }
 }

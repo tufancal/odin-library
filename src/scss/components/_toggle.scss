@@ -1,0 +1,30 @@
+.toggle {
+  position: relative;
+  display: block;
+  border-radius: calc(var(--border-radius-base) * 2);
+  width: var(--distance-3xl);
+  height: var(--distance-s);
+  background: var(--color-primary);
+  cursor: pointer;
+  transition: 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: var(--distance-xxs);
+    left: var(--distance-xxs);
+    border-radius: 50%;
+    width: var(--distance-xs);
+    height: var(--distance-xs);
+    background: var(--color-secondary);
+    transition: 0.3s;
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked + .toggle::after {
+      transform: translateX(300%);
+    }
+  }
+}

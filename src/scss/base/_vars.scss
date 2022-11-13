@@ -26,30 +26,14 @@ $mq-desktop-l: 'screen and (min-width: 1440px)';
   --color-cta-secondary: var(--roman);
   --color-cta-tertiary: var(--brunt-sienna);
 
-  //Light mode
-  --color-primary-light: var(--white);
-  --color-secondary-light: var(--eastern-blue);
-  --color-cta-primary-light: var(--moody-blue);
-  --color-cta-secondary-light: var(--shiraz);
-  --color-cta-tertiary-light: var(--burning-orange);
-
   // <<< Use case colors >>>
 
   // Body
-  //Dark mode
   --color-body-bg: var(--color-primary);
   --color-body-text: var(--color-primary);
 
-  // Light mode
-  --color-body-bg-light: var(--color-primary-light);
-  --color-body-text-light: var(--color-primary-light);
-
   // Component
-  //Dark mode
   --color-component-bg: var(--color-secondary);
-
-  //Light mide
-  --color-component-bg-light: var(--color-secondary-light);
 
   // <<< Fonts >>>
   //Font family
@@ -86,4 +70,12 @@ $mq-desktop-l: 'screen and (min-width: 1440px)';
   --icon-base: 70px;
   --icon-s: 100px;
   --icon-m: 130px;
+}
+
+[data-theme='light'] {
+  --color-primary: var(--white);
+  --color-secondary: var(--eastern-blue);
+  --color-cta-primary: var(--moody-blue);
+  --color-cta-secondary: var(--shiraz);
+  --color-cta-tertiary: var(--burning-orange);
 }

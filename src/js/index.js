@@ -7,6 +7,7 @@ const modal = document.querySelector('.modal-js');
 const container = document.querySelector('.container-js');
 const error = document.querySelector('.error-js');
 const form = document.querySelector('.form-js');
+const toggleSwitch = document.querySelector('.toggle__checkbox');
 
 // pre-defined libray for array of objects
 let library = [];
@@ -155,3 +156,14 @@ const targetAction = element => {
 container.addEventListener('click', element => {
   targetAction(element);
 });
+
+//Toggle Light/Dark mode
+function switchTheme(element) {
+  if (element.target.checked) {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
