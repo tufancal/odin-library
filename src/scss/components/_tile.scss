@@ -1,7 +1,7 @@
 .tile {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 auto var(--distance-m);
   padding: var(--distance-m) 0;
   max-width: 80%;
   border-radius: var(--border-radius-base);
@@ -25,5 +25,6 @@
 
   &__button {
     border-radius: 0;
+    margin: 0 var(--distance-s) var(--distance-s);
   }
 }

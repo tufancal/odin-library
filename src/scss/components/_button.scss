@@ -1,6 +1,7 @@
 .button {
   border: 1px solid transparent;
   border-radius: var(--border-radius-base);
+  margin-bottom: var(--distance-m);
   padding: var(--distance-xs) var(--distance-m);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-black);

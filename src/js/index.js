@@ -51,6 +51,7 @@ function createBookTile(element) {
 
   if (element.read) {
     read.innerHTML = 'Read';
+    read.classList.add('tile__read--active');
   } else {
     read.innerHTML = 'Not read';
   }
@@ -144,6 +145,7 @@ const targetAction = element => {
           target.classList.add('tile__read--active');
         } else {
           target.innerHTML = 'Not read';
+          target.classList.remove('tile__read--active');
         }
       }
     }
