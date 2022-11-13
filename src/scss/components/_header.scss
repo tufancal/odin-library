@@ -6,5 +6,9 @@
   &__logo {
     padding: var(--distance-xs);
     width: var(--icon-base);
+
+    @media #{$mq-tablet} {
+      width: var(--icon-s);
+    }
   }
 }

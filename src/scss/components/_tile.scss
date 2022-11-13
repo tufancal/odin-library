@@ -1,14 +1,25 @@
 .tile {
   display: flex;
+  gap: var(--distance-s);
   flex-direction: column;
   margin: 0 auto var(--distance-m);
   padding: var(--distance-m) 0;
-  max-width: 80%;
+  max-width: 70%;
   border-radius: var(--border-radius-base);
   background: var(--color-component-bg);
 
+  @media #{$mq-tablet} {
+    margin: 0;
+  }
+
   &__element {
-    margin: 0 0 var(--distance-s);
+    margin: 0;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-base);
+  }
+
+  &__highlight {
+    font-weight: var(--font-weight-bold);
   }
 
   &__read {
@@ -25,6 +36,6 @@
 
   &__button {
     border-radius: 0;
-    margin: 0 var(--distance-s) var(--distance-s);
+    margin: 0 var(--distance-l);
   }
 }

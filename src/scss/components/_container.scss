@@ -1,2 +1,8 @@
 .container {
+  @media #{$mq-tablet} {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--distance-l);
+  }
 }
