@@ -9,4 +9,13 @@
   background: var(--color-component-bg);
   color: var(--color-primary);
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 1px solid var(--color-secondary);
+    outline-offset: var(--distance-xxs);
+  }
 }

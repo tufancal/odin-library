@@ -25,13 +25,25 @@
   &__read {
     background: var(--color-cta-tertiary);
 
+    &:focus {
+      outline-color: var(--color-cta-tertiary);
+    }
+
     &--active {
       background: var(--color-cta-primary);
+
+      &:focus {
+        outline-color: var(--color-cta-primary);
+      }
     }
   }
 
   &__remove {
     background: var(--color-cta-secondary);
+
+    &:focus {
+      outline-color: var(--color-cta-secondary);
+    }
   }
 
   &__button {
