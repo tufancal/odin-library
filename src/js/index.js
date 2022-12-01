@@ -36,12 +36,7 @@ function createBookTile(element) {
   author.classList.add('tile__element');
   pages.classList.add('tile__element');
   read.classList.add('tile__read', 'tile__button', 'button', 'js-read');
-  remove.classList.add(
-    'tile__remove',
-    'tile__button',
-    'button',
-    'js-remove'
-  );
+  remove.classList.add('tile__remove', 'tile__button', 'button', 'js-remove');
 
   //Values
   title.innerHTML =
@@ -154,7 +149,9 @@ const targetAction = element => {
 };
 
 container.addEventListener('click', element => {
-  targetAction(element);
+  if (element.target.parentNode.classList.contains('tile')) {
+    targetAction(element);
+  }
 });
 
 //Toggle Light/Dark mode

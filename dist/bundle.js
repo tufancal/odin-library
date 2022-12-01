@@ -180,7 +180,9 @@ var targetAction = function targetAction(element) {
 };
 
 container.addEventListener('click', function (element) {
-  targetAction(element);
+  if (element.target.parentNode.classList.contains('tile')) {
+    targetAction(element);
+  }
 }); //Toggle Light/Dark mode
 
 function switchTheme(element) {
