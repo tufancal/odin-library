@@ -40,10 +40,10 @@ function createBookTile(element) {
 
   //Values
   title.innerHTML =
-    '<div class="tile__highlight">Title</div>' + '"' + element.title + '"';
+    '<strong>Title</strong><br>' + '"' + element.title + '"';
   author.innerHTML =
-    '<div class="tile__highlight">Author</div>' + element.author;
-  pages.innerHTML = '<div class="tile__highlight">Pages</div>' + element.pages;
+    '<strong>Author</strong><br>' + element.author;
+  pages.innerHTML = '<strong>Pages</strong><br>' + element.pages;
 
   if (element.read) {
     read.innerHTML = 'Read';
@@ -109,7 +109,7 @@ const targetAction = element => {
   const firstChild = target.parentNode.firstChild;
   const firstChildInner = firstChild.innerHTML
     .replace(/"/g, '')
-    .replace(/<div class=tile__highlight>Title<\/div>/g, '');
+    .replace(/<strong>Title<\/strong><br>/g, '');
   const remove = target.classList.contains('js-remove');
   const read = target.classList.contains('js-read');
 
