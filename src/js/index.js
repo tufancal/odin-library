@@ -1,13 +1,13 @@
 'use strict';
 import '../scss/index.scss';
 
-const addBook = document.querySelector('.add-js');
-const submitBook = document.querySelector('.submit-js');
-const modal = document.querySelector('.modal-js');
-const container = document.querySelector('.container-js');
-const error = document.querySelector('.error-js');
-const form = document.querySelector('.form-js');
-const toggleSwitch = document.querySelector('.toggle__checkbox');
+const addBook = document.querySelector('.js-add');
+const submitBook = document.querySelector('.js-submit');
+const modal = document.querySelector('.js-modal');
+const container = document.querySelector('.js-container');
+const error = document.querySelector('.js-error');
+const form = document.querySelector('.js-form');
+const toggleSwitch = document.querySelector('.js-toggle');
 
 // pre-defined libray for array of objects
 let library = [];
@@ -35,12 +35,12 @@ function createBookTile(element) {
   title.classList.add('tile__element');
   author.classList.add('tile__element');
   pages.classList.add('tile__element');
-  read.classList.add('tile__read', 'tile__read-js', 'tile__button', 'button');
+  read.classList.add('tile__read', 'tile__button', 'button', 'js-read');
   remove.classList.add(
     'tile__remove',
-    'tile__remove-js',
     'tile__button',
-    'button'
+    'button',
+    'js-remove'
   );
 
   //Values
@@ -115,8 +115,8 @@ const targetAction = element => {
   const firstChildInner = firstChild.innerHTML
     .replace(/"/g, '')
     .replace(/<div class=tile__highlight>Title<\/div>/g, '');
-  const remove = target.classList.contains('tile__remove-js');
-  const read = target.classList.contains('tile__read-js');
+  const remove = target.classList.contains('js-remove');
+  const read = target.classList.contains('js-read');
 
   //Remove or check for read
   if (target.dataset.index === target.parentNode.dataset.index) {

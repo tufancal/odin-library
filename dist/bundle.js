@@ -57,13 +57,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var addBook = document.querySelector('.add-js');
-var submitBook = document.querySelector('.submit-js');
-var modal = document.querySelector('.modal-js');
-var container = document.querySelector('.container-js');
-var error = document.querySelector('.error-js');
-var form = document.querySelector('.form-js');
-var toggleSwitch = document.querySelector('.toggle__checkbox'); // pre-defined libray for array of objects
+var addBook = document.querySelector('.js-add');
+var submitBook = document.querySelector('.js-submit');
+var modal = document.querySelector('.js-modal');
+var container = document.querySelector('.js-container');
+var error = document.querySelector('.js-error');
+var form = document.querySelector('.js-form');
+var toggleSwitch = document.querySelector('.js-toggle'); // pre-defined libray for array of objects
 
 var library = []; // Data-set attribute to check remove
 
@@ -89,8 +89,8 @@ function createBookTile(element) {
   title.classList.add('tile__element');
   author.classList.add('tile__element');
   pages.classList.add('tile__element');
-  read.classList.add('tile__read', 'tile__read-js', 'tile__button', 'button');
-  remove.classList.add('tile__remove', 'tile__remove-js', 'tile__button', 'button'); //Values
+  read.classList.add('tile__read', 'tile__button', 'button', 'js-read');
+  remove.classList.add('tile__remove', 'tile__button', 'button', 'js-remove'); //Values
 
   title.innerHTML = '<div class="tile__highlight">Title</div>' + '"' + element.title + '"';
   author.innerHTML = '<div class="tile__highlight">Author</div>' + element.author;
@@ -149,8 +149,8 @@ var targetAction = function targetAction(element) {
   var target = element.target;
   var firstChild = target.parentNode.firstChild;
   var firstChildInner = firstChild.innerHTML.replace(/"/g, '').replace(/<div class=tile__highlight>Title<\/div>/g, '');
-  var remove = target.classList.contains('tile__remove-js');
-  var read = target.classList.contains('tile__read-js'); //Remove or check for read
+  var remove = target.classList.contains('js-remove');
+  var read = target.classList.contains('js-read'); //Remove or check for read
 
   if (target.dataset.index === target.parentNode.dataset.index) {
     for (var i = 0; i < library.length; i++) {
