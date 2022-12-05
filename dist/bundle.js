@@ -159,8 +159,7 @@ var targetAction = function targetAction(element) {
 
       if (firstChild.classList.contains('tile__element') && title == firstChildInner && remove) {
         library.splice(i, 1);
-        target.parentNode.remove();
-        break; // Change read status
+        target.parentNode.remove(); // Change read status
       } else if (firstChild.classList.contains('tile__element') && title == firstChildInner && read) {
         Object.assign(library[i], {
           read: !readStatus

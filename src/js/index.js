@@ -39,10 +39,8 @@ function createBookTile(element) {
   remove.classList.add('tile__remove', 'tile__button', 'button', 'js-remove');
 
   //Values
-  title.innerHTML =
-    '<strong>Title</strong><br>' + '"' + element.title + '"';
-  author.innerHTML =
-    '<strong>Author</strong><br>' + element.author;
+  title.innerHTML = '<strong>Title</strong><br>' + '"' + element.title + '"';
+  author.innerHTML = '<strong>Author</strong><br>' + element.author;
   pages.innerHTML = '<strong>Pages</strong><br>' + element.pages;
 
   if (element.read) {
@@ -127,7 +125,6 @@ const targetAction = element => {
       ) {
         library.splice(i, 1);
         target.parentNode.remove();
-        break;
         // Change read status
       } else if (
         firstChild.classList.contains('tile__element') &&
